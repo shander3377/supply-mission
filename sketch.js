@@ -4,7 +4,6 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
-const Render = Matter.Render;
 function preload()
 {
 	helicopterIMG=loadImage("helicopter.png")
@@ -26,11 +25,6 @@ function setup() {
 	groundSprite=createSprite(width/2, height-35, width,10);
 	groundSprite.shapeColor=color(255)
 
-	box1 = new box(600,500,30,170)
-	box2 = new box(500,600,170,30)
-	box3 = new box(400,500,30,170)
-
-
 	engine = Engine.create();
 	world = engine.world;
 
@@ -45,6 +39,9 @@ function setup() {
 
 	Engine.run(engine);
   
+	box1 = new box(500,500,30,170)
+	box2 = new box(400,600,170,30)
+	box3 = new box(300,500,30,170)
 }
 
 
@@ -67,3 +64,6 @@ function keyPressed() {
     
   }
 }
+
+
+
